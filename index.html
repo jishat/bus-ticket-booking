@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1>Mega City Bus</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+
+        <!-- Booking Form -->
+        <div id="booking-form">
+            <h3>Explore By Bus</h3>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="from">From</label>
+                    <input class="inp-style" id="from" type="text" name="from" placeholder="Your location">
+                </div>
+                <div class="input-group">
+                    <label for="to">To</label>
+                    <input class="inp-style" id="to" type="text" name="to" placeholder="Destination">
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="departure">Departure</label>
+                    <input class="inp-style" id="departure" type="date" name="departure">
+                </div>
+                <div class="input-group">
+                    <label for="return">Return</label>
+                    <input class="inp-style" id="return" type="date" name="return">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <div class="eachClassCount">
+
+                            <button class="plus-minus-btn" id="first-class-decrease"><i class="fa fa-minus-square"></i></button>
+
+                            <input class="inp-style inp-width" id="quantity-first-class" min='0' type="number" value=0 name="">
+        
+                            <button class="plus-minus-btn" id="first-class-increase"><i class="fa fa-plus-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <div class="eachClassCount">
+                            <button class="plus-minus-btn" id="economy-decrease"><i class="fa fa-minus-square"></i></button>
+        
+                            <input class="inp-style inp-width" id="quantity-economy" min='0' type="number" value=0 name="">
+                            <button class="plus-minus-btn" id="economy-increase"><i class="fa fa-plus-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="sub-total-cost">00</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="tax">00</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$<span id="total-cost">00</span></p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style" id="submit-book-now">Book Now</button>
+        </div>
+        <!-- End: Booking Form -->
+
+        <!-- confirm booking  -->
+        <div id="bookingConfirm">
+            <div class="confirm-message">
+                <h1><span><i class="fa fa-check-circle"></i></span> Confirmed Booking!</h1>
+                <p>Congratulation! Your ticket has been successfully booking.</p>
+                <h3>Ticket No: #239-232-892</h3>
+            </div>
+            <div class="information">
+                <p>From<span id="fromWhere">From Where</span></p><hr>
+                <p>To<span id="whereTo">Where To</span></p><hr>
+                <p>Departure<span id="departure-details">mm/dd/yyyy</span></p><hr>
+                <p>Return<span id="return-details">mm/dd/yyyy</span></p><hr>
+                <p>First Class Seat<span id="firstClassSit">0</span></p><hr>
+                <p>Economy Seat<span id="economySit">0</span></p><hr>
+                <p>Total Cost<span id="total">0</span></p><br>
+                <button class="btn-style" id="download">Download Ticket</button>
+            </div>
+        </div>
+        <!-- End confirm booking  -->
+      
+    </main>
+
+    <!-- main javascript file -->
+    <script src="js/main.js"></script>
+
+    <!--Thank You-->
+</body>
+
+</html>
